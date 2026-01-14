@@ -3,7 +3,6 @@ from telethon import TelegramClient, events
 from telethon.tl.functions.messages import SendReactionRequest
 from telethon.tl.types import ReactionEmoji
 import asyncio
-#Hi
 
 client = TelegramClient('my_session', api_id, api_hash)
 
