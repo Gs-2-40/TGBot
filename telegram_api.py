@@ -16,10 +16,10 @@ async def init_reactor(event):
         messages = await client.get_messages(DUSHA_tg_id, limit=5)
         for msg in messages:
             await client(SendReactionRequest(DUSHA_tg_id, msg.id, reaction=[ReactionEmoji(emoticon='🐳')]))
-#    elif 'огонь' in event.message.text.lower():
-#        messages = await client.get_messages(DUSHA_tg_id, limit=3)
-#        for msg in messages:
-#            await client(SendReactionRequest(DUSHA_tg_id, msg.id, reaction=[ReactionEmoji(emoticon='🔥')]))
+    elif 'огонь' in event.message.text.lower():
+        messages = await client.get_messages(DUSHA_tg_id, limit=3)
+        for msg in messages:
+            await client(SendReactionRequest(DUSHA_tg_id, msg.id, reaction=[ReactionEmoji(emoticon='🔥')]))
     elif 'love' in event.message.text.lower() or ("люблю" in event.message.text.lower() and not "не люблю" in event.message.text.lower()):
         messages = await client.get_messages(DUSHA_tg_id, limit=5)
         for msg in messages:
