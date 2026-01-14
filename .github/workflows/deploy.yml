@@ -22,4 +22,4 @@ jobs:
             cd /root/GsPy/TGBot/TGBot
             git pull origin main
             source venv/bin/activate
-            sudo systemctl restart my_project.service
+            systemctl restart my_project.service
